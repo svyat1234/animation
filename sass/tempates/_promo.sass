@@ -1,0 +1,225 @@
+.promo
+    position: relative
+    padding-top: 289px
+    padding-bottom: 169px
+    margin-top: -123px
+    background: url('../img/background-line.svg') no-repeat right 200px top,url('../img/background-elips.png') no-repeat top left, url('../img/background-elips2.png') no-repeat bottom right
+    overflow: hidden
+    &::before
+        position: absolute
+        content: ''
+        display: flex
+        bottom: 0
+        left: 44px
+        width: 85px
+        height: 886px
+        background: url('../img/promo-stars1.svg') no-repeat center / cover
+        animation: fadeInOut 1s infinite linear
+    &::after
+        position: absolute
+        content: ''
+        display: flex
+        top: 41px
+        left: 50%
+        margin-left: -802px
+        width: 1604px
+        height: 834px
+        background: url('../img/promo-stars2.svg') no-repeat center / cover
+        animation: fadeInOut 1.5s infinite linear
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__heading
+        position: relative
+        z-index: 4
+        max-width: 820px
+        &__title
+            font-family: 'Radio Canada', sans-serif
+            font-weight: 700
+            font-size: 96px
+            line-height: 96px
+            letter-spacing: 0.03em
+            text-transform: capitalize
+            color: #FFFFFF
+            animation: fadeIn 5s 
+            &-bold
+                color: #7879F1
+                position: relative
+            &-bold::after
+                content: ''
+                display: flex
+                position: absolute
+                width: 291.7px
+                height: 22.09px
+                left: 0
+                bottom: 0
+                margin-left: -30px
+                background: url('../img/underline.svg') no-repeat center / 100%
+        &__info
+            display: flex
+            font-family: 'Poppins'
+            font-style: normal
+            font-weight: 400
+            font-size: 24px
+            line-height: 36px
+            letter-spacing: 0.03em
+            color: #9F8FC1
+            margin-top: 16px
+            visibility: hidden
+            animation: fadeIn 5s 1s
+        &__buttons
+            max-width: 412px
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-top: 80px
+            visibility: hidden
+            animation: fadeIn 5s 2s
+        &__button
+            &-primary
+                background: #7879F1
+                border: none
+                color: #fff
+                font-weight: 600
+                transition: box-shadow 0.3s
+                &:hover
+                    box-shadow: 0px 0px 10px 5px rgba(120, 121, 241, 0.5)
+            &-secondary
+                background: none
+                font-weight: 600
+                color: #7879F1
+                outline: 2px solid #7879F1
+                outline-offset:-2px
+                transition: all 0.3s
+                &:hover
+                    background: #7879F1
+                    color: #13082A
+    &__preview
+        position: relative
+        max-width: 720px
+        height: 673px
+        width: 100%
+        &__img
+            position: absolute
+        &__img:first-child
+            top: 50px
+            left: 95px
+            transform: rotate(-6.38deg)
+            z-index: 3
+            animation: cardScrollRight 3s  
+        &__img:nth-child(2)
+            top: 10px
+            right: 133px
+            transform: rotate(10.96deg)
+            z-index: 2
+            animation: cardRotate 3s 
+        &__img:nth-child(3)
+            top: 17.62px
+            right: 30px
+            transform: rotate(8.19deg)
+            z-index: 1
+            animation: cardScrollLeft 3s 
+        &__link
+            position: absolute
+            width: 247px
+            height: 60px
+            backdrop-filter: blur(20px)
+            border-radius: 17.7654px
+            outline: 2px solid rgba(225, 225, 225, 0.3)
+            outline-offset:-2px
+            &-coinbase
+                top: 67px
+                left: 0
+                z-index: 4
+                background: url('../img/coinbase.svg') no-repeat center / 70%, linear-gradient(106.6deg, rgba(126, 126, 126, 0.4) 1.44%, rgba(126, 126, 126, 0) 108.41%)
+                animation: rotate 4s infinite linear
+            &-metamask
+                top: 3px
+                right: 114px
+                z-index: 4
+                background: url('../img/metamask.svg') no-repeat center / 80%, linear-gradient(106.6deg, rgba(126, 126, 126, 0.4) 1.44%, rgba(126, 126, 126, 0) 108.41%)
+                animation: upAndDown 4s infinite linear
+            &-binance
+                bottom: 100px
+                right: 159px
+                z-index: 4
+                background: url('../img/binance.svg') no-repeat center / 75%, linear-gradient(106.6deg, rgba(126, 126, 126, 0.4) 1.44%, rgba(126, 126, 126, 0) 108.41%)
+                transform: rotate(-7.7deg) 
+                animation: slideInOut 6s infinite linear
+        &__info
+            position: absolute
+            bottom: 20px
+            left: 41px
+            padding: 18.57px
+            background: linear-gradient(106.6deg, rgba(126, 126, 126, 0.4) 1.44%, rgba(126, 126, 126, 0) 108.41%)
+            backdrop-filter: blur(3.09568px)
+            border-radius: 24.7654px
+            max-width: 164px
+            width: 100%
+            color: #fff
+            z-index: 4
+            outline: 2px solid rgba(225, 225, 225, 0.3)
+            outline-offset:-2px
+            animation: scaleInOut 7s infinite linear
+            &__block:first-child
+                margin-bottom: 18.57px
+            &__title
+                font-weight: 300
+                font-size: 12.3827px
+                line-height: 19px
+                letter-spacing: 0.03em
+            &__text
+                margin-top: 6.19px
+                font-weight: 400
+                font-size: 12.3827px
+                line-height: 19px
+                letter-spacing: 0.03em
+                text-transform: capitalize
+                &-bold
+                    font-weight: 600
+                &-etherum
+                    padding-left: 10px
+                    background: url('../img/etherum.svg') no-repeat left
+            &__button
+                margin-top: 12px
+                border: none
+                font-family: 'Poppins', sans-serif
+                padding: 12.38px 22.85px
+                background: #5D5FEF
+                border-radius: 24.7654px
+                font-weight: 600
+                font-size: 13px
+                line-height: 21px
+                letter-spacing: 0.03em
+                color: #fff
+                cursor: pointer
+    &__statistics
+        max-width: 418px
+        width: 100%
+        margin-top: -74px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        visibility: hidden
+        animation: fadeIn 2s 3s
+        &__card
+            color: #fff
+            text-align: center
+        &__card:not(:last-child)
+            padding-right: 26.15px
+            border-right: 2px solid rgba(255, 255, 255, 0.4)
+        &__title
+            font-weight: 600
+            font-size: 52.3077px
+            line-height: 0.8
+            color: #A5A6F6
+            width: 100px
+        &__text
+            display: flex
+            justify-content: center
+            font-weight: 400
+            font-size: 17.4359px
+            line-height: 26px
+            margin-top: 8px

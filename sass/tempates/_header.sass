@@ -1,0 +1,43 @@
+.header
+    position: relative
+    z-index: 5
+    padding: 32px 0
+    // background: linear-gradient(106.6deg, rgba(19, 8, 42, 0.32) 1.44%, rgba(126, 126, 126, 0) 108.41%)
+    background:  rgba(95, 95, 95, 0.088)
+    backdrop-filter: blur(3.09568px)
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        color: #fff
+        text-decoration: none
+        font-weight: 900
+        font-size: 27.05px
+        line-height: 41px
+        letter-spacing: -0.025em
+    &__nav
+        max-width: 575px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__link
+            color: #fff
+            text-decoration: none
+            font-size: 20px
+            line-height: 30px
+            font-weight: 400
+            &:hover
+                text-decoration-line: underline
+        &__link:first-child
+            font-weight: 800
+            text-decoration-line: underline
+    &__button
+        background: #7879F1
+        border: none
+        color: #fff
+        font-weight: 600
+        transition: box-shadow 0.3s
+        &:hover
+            box-shadow: 0px 0px 10px 5px rgba(120, 121, 241, 0.5)

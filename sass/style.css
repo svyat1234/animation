@@ -1,0 +1,432 @@
+*, input, button {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+body {
+  background-color: #13082A;
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  max-width: 1573px;
+  width: 100%;
+  margin: auto;
+}
+
+.button {
+  padding: 16px 0;
+  width: 198px;
+  border-radius: 32px;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+@keyframes cardScrollRight {
+  0% {
+    transform: translateX(-150px) rotate(-30deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-6.38deg);
+  }
+}
+@keyframes cardScrollLeft {
+  0% {
+    transform: translateX(200px) rotate(50deg);
+  }
+  100% {
+    transform: translateX(0) rotate(8.19deg);
+  }
+}
+@keyframes cardRotate {
+  0% {
+    transform: translateX(70px) translateY(-100px) rotate(40deg);
+  }
+  100% {
+    transform: rotate(10.96deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(5px) rotate(-360deg);
+  }
+}
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInOut {
+  0% {
+    transform: translateX(20px) rotate(-10deg);
+  }
+  50% {
+    transform: translateX(-10px) translateY(-10px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(20px) rotate(-10deg);
+  }
+}
+@keyframes scaleInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.header {
+  position: relative;
+  z-index: 5;
+  padding: 32px 0;
+  background: rgba(95, 95, 95, 0.088);
+  -webkit-backdrop-filter: blur(3.09568px);
+          backdrop-filter: blur(3.09568px);
+}
+.header__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 27.05px;
+  line-height: 41px;
+  letter-spacing: -0.025em;
+}
+.header__nav {
+  max-width: 575px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.header__nav__link:hover {
+  text-decoration-line: underline;
+}
+.header__nav__link:first-child {
+  font-weight: 800;
+  text-decoration-line: underline;
+}
+.header__button {
+  background: #7879F1;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: box-shadow 0.3s;
+}
+.header__button:hover {
+  box-shadow: 0px 0px 10px 5px rgba(120, 121, 241, 0.5);
+}
+
+.promo {
+  position: relative;
+  padding-top: 289px;
+  padding-bottom: 169px;
+  margin-top: -123px;
+  background: url("../img/background-line.svg") no-repeat right 200px top, url("../img/background-elips.png") no-repeat top left, url("../img/background-elips2.png") no-repeat bottom right;
+  overflow: hidden;
+}
+.promo::before {
+  position: absolute;
+  content: "";
+  display: flex;
+  bottom: 0;
+  left: 44px;
+  width: 85px;
+  height: 886px;
+  background: url("../img/promo-stars1.svg") no-repeat center/cover;
+  animation: fadeInOut 1s infinite linear;
+}
+.promo::after {
+  position: absolute;
+  content: "";
+  display: flex;
+  top: 41px;
+  left: 50%;
+  margin-left: -802px;
+  width: 1604px;
+  height: 834px;
+  background: url("../img/promo-stars2.svg") no-repeat center/cover;
+  animation: fadeInOut 1.5s infinite linear;
+}
+.promo__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.promo__heading {
+  position: relative;
+  z-index: 4;
+  max-width: 820px;
+}
+.promo__heading__title {
+  font-family: "Radio Canada", sans-serif;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 96px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  animation: fadeIn 5s;
+}
+.promo__heading__title-bold {
+  color: #7879F1;
+  position: relative;
+}
+.promo__heading__title-bold::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  width: 291.7px;
+  height: 22.09px;
+  left: 0;
+  bottom: 0;
+  margin-left: -30px;
+  background: url("../img/underline.svg") no-repeat center/100%;
+}
+.promo__heading__info {
+  display: flex;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.03em;
+  color: #9F8FC1;
+  margin-top: 16px;
+  visibility: hidden;
+  animation: fadeIn 5s 1s;
+}
+.promo__heading__buttons {
+  max-width: 412px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  visibility: hidden;
+  animation: fadeIn 5s 2s;
+}
+.promo__heading__button-primary {
+  background: #7879F1;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: box-shadow 0.3s;
+}
+.promo__heading__button-primary:hover {
+  box-shadow: 0px 0px 10px 5px rgba(120, 121, 241, 0.5);
+}
+.promo__heading__button-secondary {
+  background: none;
+  font-weight: 600;
+  color: #7879F1;
+  outline: 2px solid #7879F1;
+  outline-offset: -2px;
+  transition: all 0.3s;
+}
+.promo__heading__button-secondary:hover {
+  background: #7879F1;
+  color: #13082A;
+}
+.promo__preview {
+  position: relative;
+  max-width: 720px;
+  height: 673px;
+  width: 100%;
+}
+.promo__preview__img {
+  position: absolute;
+}
+.promo__preview__img:first-child {
+  top: 50px;
+  left: 95px;
+  transform: rotate(-6.38deg);
+  z-index: 3;
+  animation: cardScrollRight 3s;
+}
+.promo__preview__img:nth-child(2) {
+  top: 10px;
+  right: 133px;
+  transform: rotate(10.96deg);
+  z-index: 2;
+  animation: cardRotate 3s;
+}
+.promo__preview__img:nth-child(3) {
+  top: 17.62px;
+  right: 30px;
+  transform: rotate(8.19deg);
+  z-index: 1;
+  animation: cardScrollLeft 3s;
+}
+.promo__preview__link {
+  position: absolute;
+  width: 247px;
+  height: 60px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 17.7654px;
+  outline: 2px solid rgba(225, 225, 225, 0.3);
+  outline-offset: -2px;
+}
+.promo__preview__link-coinbase {
+  top: 67px;
+  left: 0;
+  z-index: 4;
+  background: url("../img/coinbase.svg") no-repeat center/70%, linear-gradient(106.6deg, rgba(126, 126, 126, 0.4) 1.44%, rgba(126, 126, 126, 0) 108.41%);
+  animation: rotate 4s infinite linear;
+}
+.promo__preview__link-metamask {
+  top: 3px;
+  right: 114px;
+  z-index: 4;
+  background: url("../img/metamask.svg") no-repeat center/80%, linear-gradient(106.6deg, rgba(126, 126, 126, 0.4) 1.44%, rgba(126, 126, 126, 0) 108.41%);
+  animation: upAndDown 4s infinite linear;
+}
+.promo__preview__link-binance {
+  bottom: 100px;
+  right: 159px;
+  z-index: 4;
+  background: url("../img/binance.svg") no-repeat center/75%, linear-gradient(106.6deg, rgba(126, 126, 126, 0.4) 1.44%, rgba(126, 126, 126, 0) 108.41%);
+  transform: rotate(-7.7deg);
+  animation: slideInOut 6s infinite linear;
+}
+.promo__preview__info {
+  position: absolute;
+  bottom: 20px;
+  left: 41px;
+  padding: 18.57px;
+  background: linear-gradient(106.6deg, rgba(126, 126, 126, 0.4) 1.44%, rgba(126, 126, 126, 0) 108.41%);
+  -webkit-backdrop-filter: blur(3.09568px);
+          backdrop-filter: blur(3.09568px);
+  border-radius: 24.7654px;
+  max-width: 164px;
+  width: 100%;
+  color: #fff;
+  z-index: 4;
+  outline: 2px solid rgba(225, 225, 225, 0.3);
+  outline-offset: -2px;
+  animation: scaleInOut 7s infinite linear;
+}
+.promo__preview__info__block:first-child {
+  margin-bottom: 18.57px;
+}
+.promo__preview__info__title {
+  font-weight: 300;
+  font-size: 12.3827px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+}
+.promo__preview__info__text {
+  margin-top: 6.19px;
+  font-weight: 400;
+  font-size: 12.3827px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+}
+.promo__preview__info__text-bold {
+  font-weight: 600;
+}
+.promo__preview__info__text-etherum {
+  padding-left: 10px;
+  background: url("../img/etherum.svg") no-repeat left;
+}
+.promo__preview__info__button {
+  margin-top: 12px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  padding: 12.38px 22.85px;
+  background: #5D5FEF;
+  border-radius: 24.7654px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  color: #fff;
+  cursor: pointer;
+}
+.promo__statistics {
+  max-width: 418px;
+  width: 100%;
+  margin-top: -74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  visibility: hidden;
+  animation: fadeIn 2s 3s;
+}
+.promo__statistics__card {
+  color: #fff;
+  text-align: center;
+}
+.promo__statistics__card:not(:last-child) {
+  padding-right: 26.15px;
+  border-right: 2px solid rgba(255, 255, 255, 0.4);
+}
+.promo__statistics__title {
+  font-weight: 600;
+  font-size: 52.3077px;
+  line-height: 0.8;
+  color: #A5A6F6;
+  width: 100px;
+}
+.promo__statistics__text {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 17.4359px;
+  line-height: 26px;
+  margin-top: 8px;
+}/*# sourceMappingURL=style.css.map */
